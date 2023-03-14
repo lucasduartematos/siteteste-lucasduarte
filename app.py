@@ -4,11 +4,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-  return "Olá, mundo! Esse é meu site. (José Florentino)"
+  return "Olá, mundo! Esse é meu site. (Lucas Duarte)"
 
 @app.route("/sobre")
 def sobre():
-  return "Um site muito maneiro. Veja só!"
+  return "Um site muito paid'égua! Veja só!"
 
 @app.route("/contato")
 def contato():
