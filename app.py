@@ -15,7 +15,7 @@ def ultimas_promocoes():
       return resultado
 
 menu = """
-<a href="/">Página Inicial</a> | <a href="/sobre">Sobre</a> | <a href="/contato">Contato</a>
+<a href="/">Página Inicial</a> | <a href="/promocoes">PROMOÇÕES E ACHADINHOS</a> | <a href="/sobre">Sobre</a> | <a href="/contato">Contato</a>
 <br>
 """
 
@@ -30,3 +30,14 @@ def sobre():
 @app.route("/contato")
 def contato():
   return "lucasduartematos@gmail.com"
+
+@app.route("/promocoes")
+def promocoes():
+  conteudo = menu + """
+  Encontrei as seguintes promoções no <a href="https://t.me/promocoeseachadinhos">@promocoeseachadinhos</a>:
+  <br>
+  <ul>
+  """
+  for promocao in ultimas_promocoes():
+    conteudo += f"<li>{promocao}</li>"
+  return conteudo + "</ul>"
